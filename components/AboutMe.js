@@ -18,7 +18,19 @@ bioContent.innerHTML = `
     <div class="content">
         <p>I am a self taught software development learner.</p>
         <p>Always practicing and focusing on getting better everyday.</p>
-        <p>Currently, I have knowledge in: Javascript, Typescript, Node Js, React, MongoDB...</p>
+        <p>Trying my best to learn more technologies but with my heart linked to Javascript <3</p>
+        <p >Currently, I have knowledge in: <span id="techs"></span></p>
+        <div class="icon-container">
+            <img src="../assets/icons8-javascript-48.png" class="icon" alt="Javascript">
+            <img src="../assets/icons8-typescript-48.png" class="icon" alt="Typescript">
+            <img src="../assets/icons8-node-js-48.png" class="icon" alt="Node Js">
+            <img src="../assets/icons8-react-40.png" class="icon" alt="React">
+            <img src="../assets/icons8-mongodb-48.png" class="icon" alt="MongoDB">
+            <img src="../assets/icons8-git-48.png" class="icon" alt="Git">
+            <img src="../assets/icons8-python-48.png" class="icon" alt="Python">
+            <img src="../assets/icons8-php-48.png" class="icon" alt="PHP">
+            <img src="../assets/icons8-mysql-logo-48.png" class="icon" alt="MySQL">
+        </div>
     </div>
 `;
 
@@ -48,10 +60,10 @@ listOfInfo.forEach((el, i) => {
     // el.setAttribute('pos', i)
     infoNav.appendChild(el);
     infoDotNav.appendChild(dot)
-    if(i === 0){
+    if (i === 0) {
         el.classList.add('visible')
         dot.classList.add('active')
-    } 
+    }
 });
 
 const changeDisplayedInfo = (pos, target) => {
@@ -64,15 +76,15 @@ const changeDisplayedInfo = (pos, target) => {
 AboutMeSection.addEventListener('click', e => {
     let dotPos = parseInt($('.active').dataset.pos);
 
-    if(Array.from(e.target.classList).includes('dot')){
+    if (Array.from(e.target.classList).includes('dot')) {
         let nextDotPos = e.target.dataset.pos;
         changeDisplayedInfo(nextDotPos, e.target)
     }
-    if(e.target == leftBtn || e.target.matches('#left-dot *')) {
+    if (e.target == leftBtn || e.target.matches('#left-dot *')) {
         (dotPos === 0) ? dotPos = $$('.dot').length - 1 : dotPos--;
         changeDisplayedInfo(dotPos, $$('.dot')[dotPos])
     }
-    if(e.target == rigthBtn || e.target.matches('#rigth-dot *')) {
+    if (e.target == rigthBtn || e.target.matches('#rigth-dot *')) {
         (dotPos === $$('.dot').length - 1) ? dotPos = 0 : dotPos++;
         changeDisplayedInfo(dotPos, $$('.dot')[dotPos])
     }
@@ -82,5 +94,16 @@ AboutMeSection.appendChild(infoNav);
 AboutMeSection.appendChild(infoDotNav);
 AboutMeSection.appendChild(leftBtn);
 AboutMeSection.appendChild(rigthBtn);
+
+AboutMeSection.addEventListener('mouseover', (e) => {
+    const techsText = $('#techs', AboutMeSection)
+    if (e.target.matches('.icon')) {
+        techsText.style.opacity = '1';
+        techsText.innerHTML = `${e.target.alt}`;
+    }
+    else {
+        techsText.style.opacity = '0';
+    }
+});
 
 export default AboutMeSection;

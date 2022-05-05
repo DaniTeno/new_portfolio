@@ -45,6 +45,7 @@
      border-top: solid 1px transparent;
      border-bottom: solid 1px transparent;
      z-index: 20;
+     backdrop-filter: blur(1px);
 }
 
 .top-door{

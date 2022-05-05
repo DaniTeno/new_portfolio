@@ -1,6 +1,6 @@
-export const $ = (query) => document.querySelector(query)
-export const $$ = (query) => document.querySelectorAll(query)
-export const $id = (id) => document.getElementById(id)
+export const $ = (query, element = document) => element.querySelector(query)
+export const $$ = (query, element = document) => element.querySelectorAll(query)
+export const $id = (id, element = document) => element.getElementById(id)
 
 export const createNode = (nodeType, title = undefined, id = undefined, className = undefined) => {
     let node = document.createElement(nodeType);
