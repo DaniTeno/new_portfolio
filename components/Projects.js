@@ -5,6 +5,13 @@ const ProjectsSection = createNode('section', 'Projects', 'projects');
 const ProjectsContainer = createNode('nav', null, 'projects-container');
 const listOfProjects = [
     new ProjectCard(
+        'Poke-Memory', 
+        'Memory game built in React, using the API from the site pokeapi.co', 
+        'https://poke-memory-red.vercel.app/', 
+        'https://github.com/DaniTeno/poke-memory', 
+        '../assets/memory-misc.jpg'
+    ),
+    new ProjectCard(
         'Postit',
         'Small app for posting notes using Node, Express and MongoDB, in vanilla Javascript',
         'https://tranquil-plains-23040.herokuapp.com/',
@@ -17,13 +24,6 @@ const listOfProjects = [
         'https://daniteno.000webhostapp.com/project-folder/eshop/index.html', 
         'https://github.com/DaniTeno/eshop--portfolio', 
         '../assets/eshop-misc.jpg'
-    ),
-    new ProjectCard(
-        'Poke-Memory', 
-        'Memory game made using the API from the site pokeapi.co', 
-        'https://poke-memory-red.vercel.app/', 
-        'https://github.com/DaniTeno/poke-memory', 
-        '../assets/memory-misc.jpg'
     ),
     new ProjectCard(
         'Block App', 
