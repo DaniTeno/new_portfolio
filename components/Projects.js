@@ -21,8 +21,8 @@ const listOfProjects = [
     new ProjectCard(
         'Poke-Memory', 
         'Memory game made using the API from the site pokeapi.co', 
-        'https://daniteno.000webhostapp.com/project-folder/memory-game/game.html', 
-        'https://daniteno.000webhostapp.com/undefined', 
+        'https://poke-memory-red.vercel.app/', 
+        'https://github.com/DaniTeno/poke-memory', 
         '../assets/memory-misc.jpg'
     ),
     new ProjectCard(
