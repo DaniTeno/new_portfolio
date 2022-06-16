@@ -3,7 +3,7 @@
     padding: 0;
     font-size: 18px;
     border-radius: 0;
-    font-family: 'Century Gothic', 'Calibri';
+    font-family: 'Century Gothic', 'Calibri', 'American Typewriter Light';
     letter-spacing: 1px;
     text-decoration: none;
     color: #000;
@@ -79,8 +79,7 @@ main > section > h2{
 }
 
 #me .name{
-    font-size: 25px;
-    text-decoration:underline;
+    font-size: 22px;
 }
 
 #me img{
@@ -151,6 +150,7 @@ main > section > h2{
     flex-direction: column;
     height: fit-content;
     margin: auto;
+    padding: .2em;
     max-width: 250px;
 }
 
@@ -250,7 +250,9 @@ main > section > h2{
 }
 
 .my-info .content i, .my-info .content p{
+    font-family: 'American Typewriter Light', 'Trebuchet MS';
     font-size: 18px;
+    color: #444;
     letter-spacing: 0;
 }
 
@@ -259,9 +261,11 @@ main > section > h2{
     background-color: rgb(226, 226, 226);
     border-bottom: rgba(0, 0, 0, 0.438) 1px solid;
     padding: .3rem .6rem;
+    
 }
 
 .link{
+    font-family: 'American Typewriter Light', 'Trebuchet MS';
     letter-spacing: 0;
     text-decoration: underline;
     color: rgb(112, 46, 138);
@@ -298,7 +302,7 @@ main > section > h2{
     background-color: rgba(0, 0, 0, 0.192);
     padding: .5rem;
     border-radius: 60%;
-    top: 80px;
+    top: calc(50% - 20px);
     width: 40px;
     transition: background-color .2s ease, border-radius .2s ease;
     cursor: pointer;
@@ -320,6 +324,7 @@ main > section > h2{
     position: relative;
     animation-name: fadeIn;
     animation-duration: 400ms;
+    min-height: 285px;
 }
 
 #info-dot .active{
@@ -355,6 +360,7 @@ main > section > h2{
     transition: .2s ease opacity;
     font-weight: 900;
     display: inline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* PROJECTS */
@@ -429,7 +435,7 @@ main > section > h2{
     top: 0;
     width: 100%;
     background-color: rgba(46, 10, 66, 0.753);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(8px);
     opacity: 0;
     transition: .3s ease opacity;
     height: 100%;
